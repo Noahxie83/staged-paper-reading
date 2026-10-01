@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640" role="img" aria-labelledby="title desc">
+<title id="title">Staged Paper Reading</title>
+<desc id="desc">A reusable reading workflow for model and algorithm papers. The Transformer note on the right is labeled as a usage example.</desc>
+<defs>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#b8cbc6" opacity=".3"/></pattern>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#173847" flood-opacity=".12"/></filter>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#77a99a" stroke-width="1.5"/></marker>
+</defs>
+<g font-family="'Segoe UI','Microsoft YaHei',Arial,sans-serif">
+<rect width="1440" height="640" fill="#f5f7f2"/>
+<rect x="800" width="640" height="480" fill="url(#grid)"/>
+<circle cx="1260" cy="130" r="220" fill="#e8f1e9"/>
+<path d="M0 470C340 420 560 560 870 460" fill="none" stroke="#e6ece4" stroke-width="2"/>
+<rect x="73" y="46" width="31" height="36" rx="5" fill="#d5e6dc" transform="rotate(-12 89 64)"/>
+<rect x="80" y="43" width="31" height="36" rx="5" fill="#1f6f58"/>
+<path d="M88 54H103M88 61H103M88 68H98" stroke="#f3f7f0" stroke-width="2" stroke-linecap="round"/>
+
+<text x="127" y="69" font-size="23" fill="#284536" font-weight="600" >staged-paper-reading</text>
+<text x="72" y="207" font-size="94" fill="#152c38" font-weight="650" letter-spacing="-3">Staged</text>
+<text x="72" y="295" font-size="78" fill="#152c38" font-weight="650" letter-spacing="-2.6">Paper Reading</text>
+<text x="77" y="344" font-size="25" fill="#577164" font-weight="400" >For model &amp; algorithm papers.</text>
+<text x="77" y="375" font-size="19" fill="#577164" font-weight="400" >适合阅读模型、算法类论文</text>
+<rect x="75" y="388" width="259" height="42" rx="21" fill="#e0ece2"/>
+<text x="94" y="415" font-size="13" fill="#286449" font-weight="650" letter-spacing="1.25">FOUR STAGES + ONE NOTE</text>
+<text x="354" y="416" font-size="19" fill="#65776c" font-weight="400" >A clear path through the paper.</text>
+
+<rect x="931" y="48" width="421" height="402" rx="19" fill="#dce9df" transform="rotate(3 1141 249)"/>
+<rect x="920" y="59" width="420" height="392" rx="18" fill="#18313e" filter="url(#shadow)"/>
+<path d="M920 118H1340" stroke="#35505a"/>
+<circle cx="944" cy="89" r="5" fill="#86c3a9"/>
+<circle cx="960" cy="89" r="5" fill="#e5c583"/>
+<circle cx="976" cy="89" r="5" fill="#7595a9"/>
+
+<text x="1000" y="96" font-size="18" fill="#e7efea" font-weight="500" font-family="Consolas,monospace">usage-example.md</text>
+<text x="948" y="153" font-size="18" fill="#91c7ac" font-weight="650" >以下为使用示例</text>
+<text x="948" y="185" font-size="22" fill="#eff5f0" font-weight="600" >Attention Is All You Need</text>
+<text x="948" y="214" font-size="15" fill="#b8ccc3" font-weight="400" >Transformer · NIPS 2017</text>
+<text x="948" y="249" font-size="13" fill="#91c7ac" font-weight="650" letter-spacing="1.7">SECOND TIME</text>
+<rect x="948" y="265" width="92" height="42" rx="8" fill="#254753" stroke="#577c7f"/>
+<text x="962" y="292" font-size="16" fill="#dcece4" font-weight="500" >Encoder</text>
+<rect x="1073" y="265" width="92" height="42" rx="8" fill="#254753" stroke="#577c7f"/>
+<text x="1087" y="292" font-size="16" fill="#dcece4" font-weight="500" >Decoder</text>
+<rect x="1198" y="265" width="92" height="42" rx="8" fill="#254753" stroke="#577c7f"/>
+<text x="1212" y="292" font-size="16" fill="#dcece4" font-weight="500" >Token</text>
+<path d="M1046 286H1066M1171 286H1191" fill="none" stroke="#86b6a5" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="948" y="345" font-size="13" fill="#91c7ac" font-weight="650" letter-spacing="1.7">OVERALL REVIEW</text>
+<text x="948" y="376" font-size="17" fill="#edf4ef" font-weight="400" >Parallel training. Sequential generation.</text>
+<rect x="948" y="395" width="282" height="32" rx="16" fill="#2d6652"/>
+<text x="966" y="417" font-size="15" fill="#d8f0df" font-weight="500" >One paper. A reusable workflow.</text>
+<rect x="72" y="493" width="208" height="94" rx="12" fill="#ffffff" stroke="#d6e1d7"/>
+<text x="89" y="518" font-size="11" fill="#628975" font-weight="650" letter-spacing=".8">01  /  PART 1</text>
+<text x="89" y="553" font-size="17" fill="#253f32" font-weight="600" >Abstract + conclusion</text>
+<path d="M287 540H308" fill="none" stroke="#77a99a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="318" y="493" width="208" height="94" rx="12" fill="#ffffff" stroke="#d6e1d7"/>
+<text x="335" y="518" font-size="11" fill="#628975" font-weight="650" letter-spacing=".8">02  /  PART 2</text>
+<text x="335" y="553" font-size="17" fill="#253f32" font-weight="600" >Figures + tables</text>
+<path d="M533 540H554" fill="none" stroke="#77a99a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="564" y="493" width="208" height="94" rx="12" fill="#ffffff" stroke="#d6e1d7"/>
+<text x="581" y="518" font-size="11" fill="#628975" font-weight="650" letter-spacing=".8">03  /  SECOND READ</text>
+<text x="581" y="553" font-size="17" fill="#253f32" font-weight="600" >Chapter guide</text>
+<path d="M779 540H800" fill="none" stroke="#77a99a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="810" y="493" width="208" height="94" rx="12" fill="#ffffff" stroke="#d6e1d7"/>
+<text x="827" y="518" font-size="11" fill="#628975" font-weight="650" letter-spacing=".8">04  /  REVIEW</text>
+<text x="827" y="553" font-size="17" fill="#253f32" font-weight="600" >Whole-paper review</text>
+<path d="M1026 540H1068" fill="none" stroke="#77a99a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="1080" y="493" width="288" height="94" rx="12" fill="#dceee1" stroke="#a9c9b6"/>
+<text x="1100" y="518" font-size="11" fill="#3c755a" font-weight="650" letter-spacing=".9">AUTOMATIC WRAP-UP</text>
+<text x="1100" y="553" font-size="20" fill="#214934" font-weight="650" >Concise reading note</text>
+<text x="75" y="623" font-size="12" fill="#7a8d7e" font-weight="600" letter-spacing="1.3">MARKDOWN  +  MERMAID</text>
+<text x="1227" y="623" font-size="13" fill="#718675" font-weight="500" >v0.2.0  /  MIT</text>
+</g></svg>
