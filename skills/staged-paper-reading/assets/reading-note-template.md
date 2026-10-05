@@ -1,7 +1,5 @@
 # 论文题名
 
-> 作者 · 年份/版本 · 原文来源
-
 # First Time
 
 ## 1. Abstract

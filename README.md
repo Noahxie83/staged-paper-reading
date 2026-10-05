@@ -8,7 +8,7 @@
 
 <p align="center">
   简体中文 · 分阶段阅读 · 全部图表 · 精简笔记 · Mermaid<br>
-  <code>v0.2.0</code> · <a href="LICENSE">MIT License</a>
+  <code>v0.2.1</code> · <a href="LICENSE">MIT License</a>
 </p>
 
 <p align="center">
@@ -82,7 +82,7 @@ $staged-paper-reading 带我读这篇论文，从第一次阅读 Part 1 开始�
 <a id="notes"></a>
 ## 笔记长什么样？
 
-采用 **First Time → Second Time → Overall Review** 的组织方式。普通小节保留少量要点，方法部分保留关键流程和必要公式。
+采用 **First Time → Second Time → Overall Review** 的组织方式。笔记从论文标题直接进入正文，省略原文出处、PDF 页数、页码约定和阅读范围等开场说明。普通小节保留少量要点，方法部分保留关键流程和必要公式。
 
 | 分组 | 留下什么 |
 |---|---|
@@ -146,7 +146,7 @@ $staged-paper-reading 带我读这篇论文，从第一次阅读 Part 1 开始�
 
 ## 试用状态
 
-四阶段标准流程已用一篇会议论文完成首次试读；v0.2.0 新增笔记任务已生成对应精简示例并检查流程图。无结论、无实验、无图表等分支已做规则检查，尚未逐项真实试用。
+四阶段标准流程已用一篇会议论文完成首次试读；v0.2.0 新增笔记任务已生成对应精简示例并检查流程图。v0.2.1 移除笔记开头的来源与阅读过程说明。无结论、无实验、无图表等分支已做规则检查，尚未逐项真实试用。
 
 ## 来源与许可
 

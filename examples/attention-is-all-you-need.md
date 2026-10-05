@@ -1,9 +1,5 @@
 # Attention Is All You Need
 
-> Vaswani et al. · NIPS 2017 会议版 · [原文 PDF](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
-
-> **使用示例：** 本笔记展示 staged-paper-reading 的输出格式；该 skill 主要适合模型、算法类论文，工作流可用于不同论文。
-
 # First Time
 
 ## 1. Abstract
