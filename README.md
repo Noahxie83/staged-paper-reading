@@ -1,3 +1,5 @@
+<p align="right"><a href="https://github.com/Noahxie83"><sub>Noah Xie · Personal profile</sub></a></p>
+
 <p align="center">
   <img src="assets/cover.svg" alt="Staged Paper Reading：适合模型与算法类论文，右侧 Transformer 笔记标为使用示例" width="100%">
 </p>
