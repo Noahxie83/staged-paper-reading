@@ -38,6 +38,14 @@ description: "主要面向模型、算法类论文的通用四阶段阅读 skill
 
 ## 阶段与停止规则
 
+```mermaid
+flowchart LR
+    A["First Time / Part 1<br/>摘要与结论"] -->|继续| B["First Time / Part 2<br/>全部图表"]
+    B -->|继续| C["Second Time<br/>正文速读"]
+    C -->|继续| D["Overall Review<br/>通篇总结"]
+    D -->|自动生成| N["Markdown 阅读笔记"]
+```
+
 | 阶段 | 输出名称 | 结束后的行为 |
 |---|---|---|
 | 1 | 第一次阅读 Part 1 | 告知本阶段结束，等待用户说“继续” |

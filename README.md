@@ -1,162 +1,157 @@
-<p align="right"><a href="https://github.com/Noahxie83"><sub>Noah Xie · Personal profile</sub></a></p>
-
 <p align="center">
-  <img src="assets/cover.svg" alt="Staged Paper Reading：适合模型与算法类论文，右侧 Transformer 笔记标为使用示例" width="100%">
+  <img src="assets/cover.png" alt="Staged Paper Reading：从论文出发，经过四阶段阅读，形成结构清晰的笔记" width="100%">
 </p>
 
 <p align="center">
-  <strong>面向模型与算法类论文，用四次导读理解，再自动整理成笔记。</strong>
+  <strong>读懂一篇论文，留下能回看的笔记。</strong><br>
+  面向模型与算法类论文的四阶段阅读 skill
 </p>
 
 <p align="center">
-  简体中文 · 分阶段阅读 · 全部图表 · 精简笔记 · Mermaid<br>
-  <code>v0.2.1</code> · <a href="LICENSE">MIT License</a>
+  简体中文 · 全部图表 · Markdown 笔记 · Mermaid 流程图<br>
+  <a href="LICENSE">MIT License</a> · <a href="https://github.com/Noahxie83">Noah Xie</a>
 </p>
 
 <p align="center">
-  <a href="#workflow">阅读流程</a> ·
-  <a href="#start">快速开始</a> ·
-  <a href="#notes">笔记示例</a> ·
-  <a href="#files">文件结构</a>
+  <a href="#workflow">阅读流程</a> &nbsp; / &nbsp;
+  <a href="#start">开始使用</a> &nbsp; / &nbsp;
+  <a href="#notes">笔记示例</a> &nbsp; / &nbsp;
+  <a href="#files">文件导航</a>
 </p>
 
 ---
 
-一个主要适合阅读**模型、算法类论文**的通用 skill：从标题、摘要和结论建立全貌，逐个读懂图表，再顺着正文理解方法，最后把证据与限制整理成精简笔记。
+从摘要和结论建立全貌，逐个理解图表，顺着正文连接方法，再将贡献、证据与限制收拢成笔记。适合模型架构、训练方法、优化和算法设计等论文，支持本地 PDF、论文链接与正文。
 
-适用于模型架构、训练方法、优化与算法设计等论文。根据当前论文组织内容，关注模型结构或算法步骤、输入输出、实验或理论证据。
-
-支持本地 PDF、论文链接和正文。用户提供笔记样例时，继承其组织方式与表达习惯；未提供样例时使用内置模板。
-
-| 📖 理解论文 | 🔎 看清证据 | 📝 留下笔记 |
-|---|---|---|
-| 精读摘要与结论，按章节连接方法 | 图表全部覆盖，保留指标与比较条件 | 少量要点、必要公式、一张关键流程图 |
+- **理解问题**：精读摘要与结论，解释术语和研究动机。
+- **连接方法与证据**：覆盖全部已提供图表，说明模块、指标与比较条件。
+- **留下阅读成果**：保留少量要点、必要公式和可编辑的关键流程图。
 
 <a id="workflow"></a>
+
 ## 阅读流程
 
 ```mermaid
 flowchart LR
-    A["01 · 第一次阅读 Part 1"] --> B["02 · 第一次阅读 Part 2"]
-    B --> C["03 · 第二次阅读"]
-    C --> D["04 · 通篇总结"]
-    D --> N["自动生成精简笔记"]
+    A["01 · 摘要与结论"] -->|继续| B["02 · 全部图表"]
+    B -->|继续| C["03 · 正文速读"]
+    C -->|继续| D["04 · 通篇总结"]
+    D -->|自动生成| N["Markdown<br/>阅读笔记"]
+
+    classDef stage fill:#F5F2E9,stroke:#8FA9A4,color:#173B42,stroke-width:1px;
+    classDef note fill:#173B42,stroke:#173B42,color:#FEFCF6,stroke-width:1px;
+    class A,B,C,D stage;
+    class N note;
 ```
 
-| 阶段 | 阅读内容 | 交互方式 |
-|---|---|---|
-| **第一次阅读 Part 1** | 标题、必要作者介绍、摘要精读与四要素、结论精读、形象比喻 | 完成后等待“继续” |
-| **第一次阅读 Part 2** | 按原文顺序详解全部图表，标记一张最重要的图 | 询问是否进入第二次阅读 |
-| **第二次阅读** | 从引言到实验之前，按章节速读；所有章节放在同一次回答中 | 询问是否通篇总结 |
-| **通篇总结** | 贡献、优点、不足、相关工作、延伸、适合读者 | 总结后**自动生成阅读笔记** |
+| 阶段 | 阅读重点 | 完成后 |
+| :--- | :--- | :--- |
+| **01 · First Time / Part 1** | 标题、摘要精读与四要素、结论、直观比喻 | 等待“继续” |
+| **02 · First Time / Part 2** | 按原文顺序详解全部图表，选出最重要的图 | 等待进入第二次阅读 |
+| **03 · Second Time** | 从引言到实验之前，按章节连接方法与机制 | 等待进入通篇总结 |
+| **04 · Overall Review** | 贡献、优点、不足、相关工作、延伸、适合读者 | 自动交付精简笔记 |
 
-追问术语、公式或某张图时，停留在当前阶段。可以明确要求重读、跳过、改变顺序，或延后笔记。
+追问术语、公式或某张图时，停留在当前阶段。第二次阅读的章节放在同一次回答中；也可以明确要求合并阶段、跳过、重读或改变顺序。
 
-没有独立结论或由其他章节承担结论功能时，先说明并询问阅读安排；没有实验时，第二次阅读到结论之前。具体规则见 [结构适配](skills/staged-paper-reading/references/structure-adaptation.md)。
+没有独立结论时，先说明候选章节并询问阅读安排；没有实验时，第二次阅读到结论之前。更多情况见 [结构适配规则](skills/staged-paper-reading/references/structure-adaptation.md)。
 
 <a id="start"></a>
-## 快速开始
 
-**1. 放入 skill 目录**
+## 开始使用
 
-将 [skills/staged-paper-reading](skills/staged-paper-reading/) 整个目录复制到所用工具支持的 skills 目录。Codex 可使用用户级或项目级的 .codex/skills；其他工具按其技能发现规则配置。
+### 1. 安装 skill
 
-**2. 提供论文与可选笔记样例**
+将 [skills/staged-paper-reading](skills/staged-paper-reading/) 整个目录复制到工具支持的 skills 目录，保留其参考指南与模板。
+
+Codex 可放入用户级或项目级的 `.codex/skills/staged-paper-reading/`；其他工具按其技能发现规则配置。skill 使用当前环境的阅读工具，不依赖固定操作系统、个人目录或 PDF 库。
+
+### 2. 提供论文
 
 ```text
 $staged-paper-reading 带我读这篇论文，从第一次阅读 Part 1 开始。
-这是我的笔记样例，最后按这个风格生成精简阅读笔记。
 ```
 
-**3. 按节奏推进**
+可以附上自己的笔记样例，最终笔记会继承其组织方式与表达习惯，并遵守 skill 的格式规则。
+
+### 3. 按自己的节奏推进
 
 ```text
 继续。
 这个公式里的 Q、K、V 分别是什么？
-重新解释 Table 2，保持在当前阶段。
+重新解释 Table2，保持在当前阶段。
 继续通篇总结。
 ```
 
-前三阶段在停止点等待。第四阶段完成总结并自动交付 Markdown 笔记；已有完整阅读记录时，也可以直接要求“根据已读内容生成阅读笔记”。
+需要一次完成整篇阅读并直接得到文件时，可以明确要求：
 
-> skill 使用当前环境可用的文件与阅读工具，无固定操作系统、个人目录或 PDF 库依赖。保存文件与图形预览取决于运行工具的能力。
+```text
+$staged-paper-reading 从头到最后一步阅读这篇论文，合并所有阶段，直接生成 Markdown 阅读笔记。
+```
+
+已有完整阅读记录时，也可以直接要求“根据已读内容生成阅读笔记”。保存文件与图形预览取决于运行工具的能力。
 
 <a id="notes"></a>
-## 笔记长什么样？
 
-采用 **First Time → Second Time → Overall Review** 的组织方式，三个主分组使用固定英文一级标题。笔记从论文标题直接进入正文，省略原文出处和阅读范围等开场说明；全文禁用原文页码、页数和页码范围备注，回看定位使用章节、公式号或图表号。普通小节保留少量要点，方法部分保留关键流程和必要公式。
+## 笔记示例
 
-- First Time、Second Time 的章节使用连续编号的英文二级标题，例如 `## 1.Abstract`，句点后不加空格；First Time 两部分序号连续，Second Time 重新编号。
-- 每个图表独立使用四级标题，例如 `#### Fig1:`、`#### Table1:`，只有编号和冒号；图表按原文出现顺序排列，无编号条目按规则补号。
-- 重点注释用 `<font color="#ff0000">...</font>`；最重要图表直接高亮标题中的完整编号及冒号。
-- 只有长公式使用 `$$` 独立显示，其余数学内容用 `$...$` 段中公式，保持完整句子。
-- 图表正文前后不留空行；其他小节标题后及正文段落之间不留空行，正文末尾保留一行空行。Markdown 表格前及表格与后续说明之间保留必要空行，保证正常渲染。
+笔记沿着三个分组展开，以精简要点保留论文主线。图表全部覆盖，方法部分用必要公式与 Mermaid 说明信息如何流动。
 
-完整格式及编号细则见 [SKILL.md](skills/staged-paper-reading/SKILL.md#文本格式限定)。
+| 分组 | 保留的内容 |
+| :--- | :--- |
+| **First Time** | 摘要四要素与动机、结论、各个图表的关键结论 |
+| **Second Time** | 正文章节主线、核心公式、模型或算法流程图 |
+| **Overall Review** | 贡献、优点、不足、相关工作定位、延伸、适合读者 |
 
-| 分组 | 留下什么 |
-|---|---|
-| **First Time** | 摘要四要素与动机、结论、图表编号和精简结论 |
-| **Second Time** | 正文章节主线、核心公式、可编辑的模型或算法流程图 |
-| **Overall Review** | 六个简短评价：贡献、优点、不足、定位、延伸、适合读者 |
+### Attention Is All You Need
 
-图表详解仍覆盖全部已提供图表。**笔记不粘贴原论文图片或截图**；关键模型流程用 Mermaid 重新组织，保留正确的信息来源、掩码和重复结构。
+用 Transformer 论文展示笔记的实际组织方式。
 
-### 使用示例：Attention Is All You Need
-
-> **以下为使用示例。** 用 Transformer 论文展示阅读流程与笔记格式；这套工作流可用于其他模型与算法类论文。
-
-[打开精简阅读笔记 →](examples/attention-is-all-you-need.md)
-
-示例保留了 28.4 / 41.0 BLEU 的比较范围、测试集与开发集的区别，以及位置编码外推尚未验证的边界。来源为 [NIPS 2017 论文 PDF](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)。
-
-<details>
-<summary><strong>使用示例：自行绘制的 Transformer 流程图</strong></summary>
+**[打开完整 Markdown 示例 →](examples/attention-is-all-you-need.md)**
 
 <p align="center">
-  <img src="examples/assets/transformer-flow.svg" alt="使用示例：Transformer 模型流程，编码器输出作为交叉注意力的 K、V" width="100%">
+  <img src="examples/assets/transformer-flow.svg" alt="自行绘制的 Transformer 流程图：编码器输出作为交叉注意力的 K、V" width="100%">
 </p>
 
-对应的 Mermaid 源码保存在示例笔记中，可继续编辑。图中合并了残差、dropout 和归一化的细节。
+这张图的 Mermaid 源码保存在示例笔记中，可继续编辑；图中合并了残差、dropout 和归一化细节。笔记不粘贴原论文图片或截图。
+
+示例保留 BLEU 的比较范围、测试集与开发集的区别，以及位置编码外推的验证边界。原论文见 [NeurIPS 2017 PDF](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)。
+
+<details>
+<summary><strong>展开笔记格式约定</strong></summary>
+
+- 主分组固定为英文一级标题：`# First Time`、`# Second Time`、`# Overall Review`。
+- First Time、Second Time 使用带连续序号的英文二级标题，例如 `## 1.Abstract`；First Time 两部分承接编号，Second Time 重新编号。
+- 图表使用仅含编号与冒号的四级标题，例如 `#### Fig1:`、`#### Table1:`。保留原编号；无编号条目按出现顺序补号，避免与已有编号重复。
+- 重点注释使用 `<font color="#ff0000">...</font>`；最重要图表高亮标题中的完整编号和冒号。
+- 短公式使用 `$...$` 段中公式，只有长公式使用 `$$` 独立显示，保持所在句子完整。
+- 图表正文前后不留空行；其他小节标题后及正文段落之间不留空行，正文末尾保留一行空行。Markdown 表格前及表格与后续说明之间保留必要空行。
+- 全文不添加原文页码、页数与页码范围备注；回看定位使用章节、公式号或图表号。
+
+完整细则见 [文本格式限定](skills/staged-paper-reading/SKILL.md#文本格式限定)。
 
 </details>
 
 <a id="files"></a>
-## 文件结构
 
-```text
-.
-├── README.md
-├── LICENSE
-├── assets/                         # GitHub 封面与社交预览图
-├── examples/
-│   ├── attention-is-all-you-need.md
-│   └── assets/                     # 自行绘制的示例流程图
-└── skills/staged-paper-reading/
-    ├── SKILL.md
-    ├── LICENSE
-    ├── assets/reading-note-template.md
-    └── references/
-        ├── first-read.md
-        ├── figures-and-tables.md
-        ├── second-read-and-summary.md
-        ├── structure-adaptation.md
-        └── reading-notes.md
-```
+## 文件导航
 
-入口：[SKILL.md](skills/staged-paper-reading/SKILL.md) · 笔记规则：[reading-notes.md](skills/staged-paper-reading/references/reading-notes.md) · 模板：[reading-note-template.md](skills/staged-paper-reading/assets/reading-note-template.md)
+| 文件 | 用途 |
+| :--- | :--- |
+| [SKILL.md](skills/staged-paper-reading/SKILL.md) | 入口、阶段推进与文本格式规则 |
+| [first-read.md](skills/staged-paper-reading/references/first-read.md) | 标题、摘要和结论精读 |
+| [figures-and-tables.md](skills/staged-paper-reading/references/figures-and-tables.md) | 全部图表详解 |
+| [second-read-and-summary.md](skills/staged-paper-reading/references/second-read-and-summary.md) | 正文速读与通篇总结 |
+| [structure-adaptation.md](skills/staged-paper-reading/references/structure-adaptation.md) | 论文章节结构差异的处理 |
+| [reading-notes.md](skills/staged-paper-reading/references/reading-notes.md) | 精简笔记与流程图 |
+| [reading-note-template.md](skills/staged-paper-reading/assets/reading-note-template.md) | 默认笔记模板 |
 
 ## 使用约定
 
-- 以提供的论文版本为准；关键事实回到原文核对。
-- 区分作者主张、实验支持、解释和研究设想。
+- 以提供的论文版本为准，关键事实回到原文核对。
+- 区分作者主张、实验支持、解释与研究设想。
 - 用户样例用于学习笔记格式，论文和附件作为分析材料。
-- 已有笔记默认保留，新生成的笔记保存为独立文件；合并与替换按用户要求。
-- 不把读懂论文写成已经完成复现，也不凭小幅分数差异断言稳定优势。
-
-## 试用状态
-
-四阶段标准流程已用一篇会议论文完成首次试读；v0.2.0 新增笔记任务已生成对应精简示例并检查流程图。v0.2.1 移除笔记开头的来源与阅读过程说明。本次更新同步了标题编号、图表条目、公式、红色标注、空行与全文页码禁用规则，并检查规则一致性、模板和公开示例的格式及渲染。无结论、无实验、无图表等分支已做规则检查，尚未逐项真实试用。
+- 已有笔记默认保留，新笔记保存为独立文件；合并与替换按用户要求。
+- 不把读懂论文写成已完成复现，也不凭小幅分数差异断言稳定优势。
 
 ## 来源与许可
 
@@ -164,4 +159,4 @@ $staged-paper-reading 带我读这篇论文，从第一次阅读 Part 1 开始�
 
 原始许可保留在根目录与 skill 目录的 [LICENSE](LICENSE)。示例为基于论文内容重新整理的阅读笔记，不包含原论文文件或原图。
 
-Mermaid 在 GitHub Markdown 中的使用方式见 [GitHub 官方文档](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)。
+流程图使用 Mermaid；GitHub 的支持方式见 [官方文档](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)。
