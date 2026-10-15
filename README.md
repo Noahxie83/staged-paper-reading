@@ -13,10 +13,10 @@
 </p>
 
 <p align="center">
-  <a href="#workflow">阅读流程</a> &nbsp; / &nbsp;
-  <a href="#start">开始使用</a> &nbsp; / &nbsp;
-  <a href="#notes">格式示例</a> &nbsp; / &nbsp;
-  <a href="#files">文件导航</a>
+  <a href="#workflow"><img src="assets/nav-workflow.svg" alt="阅读流程" width="144" height="42"></a>
+  <a href="#start"><img src="assets/nav-start.svg" alt="开始使用" width="144" height="42"></a>
+  <a href="#notes"><img src="assets/nav-notes.svg" alt="格式示例" width="144" height="42"></a>
+  <a href="#files"><img src="assets/nav-files.svg" alt="文件导航" width="144" height="42"></a>
 </p>
 
 支持本地 PDF、论文链接与正文。先精读标题、摘要和结论，再借助重点符号表逐章理解正文，最后把贡献、证据与限制连起来。完整解释从首次实际阅读起保存，每阶段、每轮答疑更新同一文件。
@@ -28,6 +28,15 @@
 ## 阅读流程
 
 三个主阶段，以及可选的剩余阅读与循环答疑。旧版独立的 First Time Part 2 已取消，图表详解归入第二次阅读；收尾保留完整导读，不再额外生成精简笔记。
+
+<p align="center">
+  <img src="assets/reading-flow.svg" alt="三个阅读阶段的完整解释依次汇入同一份 reading.md，每轮答疑也更新该文件" width="100%">
+</p>
+
+<p align="right"><a href="assets/workflow.svg">查看静态版</a></p>
+
+<details>
+<summary><strong>展开完整阅读流程与可选分支</strong></summary>
 
 ```mermaid
 flowchart TD
@@ -43,6 +52,8 @@ flowchart TD
     E -->|否| D
     D --> N["交付同一份完整阅读 Markdown"]
 ```
+
+</details>
 
 | 阶段 | 阅读重点 | 交付与推进 |
 | :--- | :--- | :--- |

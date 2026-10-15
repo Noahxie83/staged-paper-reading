@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="42" viewBox="0 0 144 42" role="img" aria-labelledby="title">
+  <title id="title">文件导航</title>
+  <rect x=".5" y=".5" width="143" height="41" rx="7" fill="#f5f2e9" stroke="#8fa9a4"/>
+  <text x="72" y="26" text-anchor="middle" fill="#173b42" font-family="system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="600">文件导航</text>
+</svg>
