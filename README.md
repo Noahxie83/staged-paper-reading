@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/workflow.svg" alt="Staged Paper Reading：First Time、Second Time、Overall Review，每一步写入同一份完整阅读 Markdown" width="100%">
+  <img src="assets/cover.png" alt="Staged Paper Reading：分阶段精读，图表与公式按需详解，First Time、Second Time、Overall Review 持续累积到一份完整 Markdown 阅读记录" width="100%">
 </p>
 
 <p align="center">
