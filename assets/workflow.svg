@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+  <title id="title">Staged Paper Reading</title>
+  <desc id="desc">Three main stages: First Time, Second Time, Overall Review. Each stage updates one complete Markdown file. Figures and equations are independent choices within Second Time.</desc>
+  <rect width="1280" height="440" fill="#f5f2e9"/>
+  <g fill="#173b42" font-family="Georgia, 'Times New Roman', serif">
+    <text x="64" y="102" font-size="55">Staged Paper Reading</text>
+  </g>
+  <g fill="#173b42" font-family="Arial, sans-serif">
+    <text x="66" y="148" font-size="21">Read closely. Keep the complete explanation.</text>
+    <path d="M64 187H1216" stroke="#8fa9a4"/>
+    <text x="66" y="245" font-size="27">First Time</text>
+    <text x="66" y="283" font-size="18">Title, abstract, conclusion</text>
+    <text x="475" y="245" font-size="27">Second Time</text>
+    <text x="475" y="283" font-size="18">Notation, close reading</text>
+    <text x="475" y="313" font-size="17">Figures and equations by choice</text>
+    <text x="908" y="245" font-size="27">Overall Review</text>
+    <text x="908" y="283" font-size="18">Contributions, evidence, limits</text>
+    <path d="M370 240H432M422 233L432 240L422 247M804 240H866M856 233L866 240L856 247" fill="none" stroke="#173b42" stroke-width="2"/>
+    <path d="M64 350H1216" stroke="#8fa9a4"/>
+    <text x="66" y="395" font-size="18">Every stage and every Q&amp;A updates one complete Markdown file.</text>
+  </g>
+</svg>
