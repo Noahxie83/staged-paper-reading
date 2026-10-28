@@ -91,6 +91,10 @@ flowchart TD
 
 将 [skills/staged-paper-reading](skills/staged-paper-reading/) **整个目录**复制到当前工具支持的 skills 目录，保留 `references/` 与 `assets/`。例如本机用户目录中的 `.codex/skills/staged-paper-reading/`；其他工具按其技能发现规则配置。
 
+同时安装 [anti-defensive-writing](https://github.com/Kiterlin/anti-defensive-writing)，使当前工具能按该名称发现并读取它的 `SKILL.md`；两个 skill 可放在同一 skills 目录。本 skill 在所有讲解、答疑与总结中默认读取并应用它，无需再次点名，并在保存和交付前完成文字检查。
+
+写作润色保留完整精读、原文顺序、原文公式符号、证据与必要限定；调用规则见 [默认写作 skill](skills/staged-paper-reading/SKILL.md#默认写作-skill)。
+
 使用当前环境可用的阅读和文件工具，不依赖固定操作系统、个人绝对路径或 PDF 库。文件工具不可用时提供可复制的完整 Markdown，并说明尚未保存。
 
 从旧版升级时替换整个 skill 目录，移除已退役的 `references/reading-notes.md` 和 `assets/reading-note-template.md`，避免旧的精简笔记规则继续生效。历史阅读笔记不因升级自动改写。
@@ -152,6 +156,7 @@ $staged-paper-reading 合并所有阶段，精读全部正文非实验内容，
 - 图表位于 Second Time，四级标题仅显示编号和冒号，例如 `#### Fig1:`、`#### Table1:`。保留原编号；无编号条目补号，避免重复。正文链接指向已有唯一精读锚点。
 - 文件重点用 `<font color="#ff0000">...</font>`，最重要图表标红完整编号及冒号；组织标签用纯文字。数学位于红色、加粗与其他强调标记之外。
 - 文件短公式使用 `$...$`，长公式使用独立两行 `$$`；聊天公式使用 `\(...\)` 与 `\[...\]`，聊天不加红色标签。
+- 所有讲解、符号表与中间推导沿用当前论文中对应量的原始记号，保留大小写、上下标及数学字形；复杂子式保留原表达式并用文字解释，不新增讲解辅助变量或别名。
 - 图表条目正文紧凑，不留空行；其他小节标题后、同节段落间不留空行，末尾与下一标题之间留一行。表格与代码等保留必要块边界；表格数学中的竖线用适当 LaTeX 命令，避免拆列。
 - 不添加原文页码、页数或范围备注；定位使用章节、公式号和图表号。不嵌入原论文图片，也不复制完整实验表。
 
