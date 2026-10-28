@@ -42,7 +42,7 @@
 flowchart TD
     A["First Time<br/>标题、作者、摘要与结论精读"] --> Q["分别选择<br/>正文图表详解？正文公式推导？"]
     Q --> S["先保存并交付重点符号与参数表"]
-    S --> B["Second Time<br/>全部正文非实验部分精读<br/>完成选中的全部正文图表与公式任务"]
+    S --> B["Second Time<br/>全部正文非实验部分精读与全部正文 Algorithm 详解<br/>完成选中的全部正文图表与公式任务"]
     B --> R{"阅读剩下部分？<br/>实际等待 60 秒，未答默认否"}
     R -->|否| D["Overall Review<br/>核对证据并通篇总结"]
     R -->|是| C["速读剩余实验、附录与已提供补充材料"]
@@ -58,7 +58,7 @@ flowchart TD
 | 阶段 | 阅读重点 | 交付与推进 |
 | :--- | :--- | :--- |
 | **First Time** | 标题与作者、摘要逐句或语义单元精读、结论逐段解读，按需给比喻及边界 | 先保存完整解释并交付链接，再提出两个独立选择；到此暂停 |
-| **Second Time** | 先交付重点符号与参数表，再精读全部正文非实验内容，完成选中的全量图表和公式任务 | 符号表后直接继续，不逐章确认；全部完成并保存后询问是否阅读剩下部分 |
+| **Second Time** | 先交付重点符号与参数表，再精读全部正文非实验内容、详解全部正文 Algorithm，完成选中的全量图表和公式任务 | 符号表后直接继续，不逐章确认；全部完成并保存后询问是否阅读剩下部分 |
 | **可选剩余阅读与答疑** | 速读尚未展开的实验、附录和已提供补充材料；按指定内容详细解释 | 每轮保存并交付同一链接，再询问还有哪部分需要解释 |
 | **Overall Review** | 主要贡献、技术优点、潜在不足、相关工作定位、启发与延伸、适合谁读 | 核对完整可访问证据，将总结追加到同一文件，检查后交付 |
 
@@ -74,6 +74,12 @@ flowchart TD
 先告知计数和默认值，保留拒绝默认的机会。“继续”或“按默认”只能接受已经明示的默认，不能替超过 5 或计数不确定的项目作答。两项都否时，正文非实验部分仍完整精读，理解主线必需的公式与证据仍会解释。
 
 选是后覆盖对应全部正文任务，不按篇幅挑选少量条目。图表包含全部子图，公式按原文性质区分推导、定义和设计选择，不伪造证明。详见 [计数与选择](skills/staged-paper-reading/references/choices-and-waiting.md)。
+
+### 正文 Algorithm 默认详解
+
+正文中的全部 Algorithm、算法框及实质性伪代码均详细解释，包含正文实验章。此任务独立于图表和公式两个选择，不增加第三个选择，也不受数量阈值控制。详解覆盖输入输出、初始化、逐步执行、循环分支、状态更新、终止条件和方法作用，并沿用原文符号；算法内公式的系统推导继续服从原公式选择。
+
+可在 Second Time 后部设置独立的 `Algorithms` 区，按原文顺序保存全部算法详解；正文实际讲到该算法的位置添加同文件跳转链接，如 `[Algorithm1 精读](#algorithm1)`。条目使用 `#### Algorithm1:` 与唯一锚点，原题名写在正文。实验章算法只补必要上下文，不自动展开整个实验章；附录算法按剩余阅读或指定答疑范围处理。详见 [Algorithm 详解指南](skills/staged-paper-reading/references/algorithms.md)。
 
 ### 等待与结构适配
 
@@ -136,7 +142,7 @@ $staged-paper-reading 合并所有阶段，精读全部正文非实验内容，
 | 分组 | 保存的实际内容 |
 | :--- | :--- |
 | **First Time** | 标题与作者、摘要逐句解读和四要素、结论逐段解读、实际比喻及边界 |
-| **Second Time** | 重点符号表、全部正文非实验精读、所选全部图表详解与公式推导、实际剩余阅读和各轮答疑 |
+| **Second Time** | 重点符号表、全部正文非实验精读、全部正文 Algorithm 详解、所选全部图表详解与公式推导、实际剩余阅读和各轮答疑 |
 | **Overall Review** | 完整六项评价，以及问题、方法、证据与适用边界之间的联系 |
 
 **[查看 Attention Is All You Need 格式片段](examples/attention-is-all-you-need.md)**。它只演示数学、图表位置、符号表和导航，省略了大部分逐段精读与推导，**不作为新版完整导读的内容深度或全量覆盖样例**。完整记录应按各阶段指南展开，不能压缩成该片段的长度。
@@ -154,6 +160,7 @@ $staged-paper-reading 合并所有阶段，精读全部正文非实验内容，
 - 三个主分组使用 `# First Time`、`# Second Time`、`# Overall Review`，只出现已有实际内容的分组。
 - First Time、Second Time 的二级英文章节在各组从 1 连续编号，例如 `## 1.Title & Authors`；Second Time 首节为 `## 1.Notation & Parameters`。补充阅读与答疑沿用编号，不新增三级标题。
 - 图表位于 Second Time，四级标题仅显示编号和冒号，例如 `#### Fig1:`、`#### Table1:`。保留原编号；无编号条目补号，避免重复。正文链接指向已有唯一精读锚点。
+- Algorithm 详解区可放在 Second Time 后部，以连续编号英文二级节组织；条目标题如 `#### Algorithm1:`，正文跳转如 `[Algorithm1 精读](#algorithm1)`，目标锚点唯一且已存在。原编号保留，原题名放正文，条目排版沿用 Fig/Table 的紧凑规则。
 - 文件重点用 `<font color="#ff0000">...</font>`，最重要图表标红完整编号及冒号；组织标签用纯文字。数学位于红色、加粗与其他强调标记之外。
 - 文件短公式使用 `$...$`，长公式使用独立两行 `$$`；聊天公式使用 `\(...\)` 与 `\[...\]`，聊天不加红色标签。
 - 所有讲解、符号表与中间推导沿用当前论文中对应量的原始记号，保留大小写、上下标及数学字形；复杂子式保留原表达式并用文字解释，不新增讲解辅助变量或别名。
@@ -176,6 +183,7 @@ $staged-paper-reading 合并所有阶段，精读全部正文非实验内容，
 | [notation.md](skills/staged-paper-reading/references/notation.md) | 正文精读前的重点符号与参数表 |
 | [figures-and-tables.md](skills/staged-paper-reading/references/figures-and-tables.md) | 所选全部正文图表与子图详解 |
 | [formula-derivation.md](skills/staged-paper-reading/references/formula-derivation.md) | 所选全部正文公式推导及作用 |
+| [algorithms.md](skills/staged-paper-reading/references/algorithms.md) | 全部正文 Algorithm 逐步详解、集中保存与正文跳转 |
 | [second-read-and-summary.md](skills/staged-paper-reading/references/second-read-and-summary.md) | 正文精读、剩余速读、循环答疑与总结 |
 | [structure-adaptation.md](skills/staged-paper-reading/references/structure-adaptation.md) | 结论替代、理论论文与混合章节适配 |
 | [reading-markdown.md](skills/staged-paper-reading/references/reading-markdown.md) | 固定累计文件、导航、数学与收尾检查 |
